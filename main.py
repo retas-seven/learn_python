@@ -52,11 +52,11 @@ class BookRetrievalService:
         '''
         書籍情報をファイル出力する
         '''
+        # isbn = edited_book.get('isbn')
         isbn = edited_book.get('onix').get('RecordReference')
-        with open(f'{isbn}.txt', mode='a') as f:
-            f.write('■書籍情報\n')
+
+        with open(f'{isbn}.json', mode='w') as f:
             f.write(str(edited_book))
-            # f.write(pprint.pformat(edited_book))
             f.write('\n')
 
 if __name__ == '__main__':
