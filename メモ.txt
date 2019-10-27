@@ -1,0 +1,15 @@
+OpenBDから取得した書籍情報の辞書を、
+↓こんな辞書に編集する。
+{
+    "isbn": "XXXXXXXXXX",
+    "title": "XXXXXXXXXX",
+    "publisher": "XXXXXXXXXX",
+    "pubdate": "XXXXXXXXXX",
+    "cover": "XXXXXXXXXX",
+    "author": "XXXXXXXXXX",
+    "datecreated": "XXXXXXXXXX",
+    "datemodified": "XXXXXXXXXX"
+    "MeasureType": "XXXXXXXXXX",
+    "Measurement": "XXXXXXXXXX",
+    "MeasureUnitCode": "XXXXXXXXXX"
+}

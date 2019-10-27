@@ -1,6 +1,7 @@
 import sys
 import json
 import requests
+from editor import Editor
 
 
 class BookRetrievalService:
@@ -45,15 +46,16 @@ class BookRetrievalService:
         '''
         書籍情報を編集する
         '''
-        # TODO 編集処理を作成
-        return book
+        edited_dict = Editor().edit_book(book)
+        return edited_dict
+        # return book
 
     def __output_book(self, edited_book):
         '''
         書籍情報をファイル出力する
         '''
-        # isbn = edited_book.get('isbn')
-        isbn = edited_book.get('onix').get('RecordReference')
+        isbn = edited_book.get('isbn')
+        # isbn = edited_book.get('onix').get('RecordReference')
 
         with open(f'{isbn}.json', mode='w') as f:
             f.write(str(edited_book))
